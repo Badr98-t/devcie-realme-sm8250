@@ -30,6 +30,11 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 30 31 32 33
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
 
+# ART Debugging (Disable)
+USE_DEX2OAT_DEBUG := false
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
