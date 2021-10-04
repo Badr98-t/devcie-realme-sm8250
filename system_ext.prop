@@ -38,6 +38,9 @@ debug.hwui.target_cpu_time_percent=20
 # CNE
 persist.vendor.cne.feature=1
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # DPM
 persist.vendor.dpm.feature=11
 
