@@ -249,9 +249,7 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery
 
-# Health (Lineage)
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
+ 
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -298,10 +296,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.oplus
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service.oplus
-
+ 
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
@@ -489,10 +484,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oplus
 
 # USB
 PRODUCT_PACKAGES += \
