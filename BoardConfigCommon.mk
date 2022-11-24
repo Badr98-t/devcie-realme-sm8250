@@ -22,12 +22,12 @@
 # definition file).
 #
 
-BOARD_VENDOR := realme
 COMMON_PATH := device/realme/sm8250-common
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_CLANG_PROPERTY := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -103,12 +103,9 @@ TARGET_USES_CUSTOM_C2_MANIFEST := true
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(COMMON_PATH)/device_framework_matrix.xml \
-    $(COMMON_PATH)/vendor_framework_compatibility_matrix.xml \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
-DEVICE_MATRIX_FILE += $(COMMON_PATH)/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE += \
-    $(COMMON_PATH)/manifest.xml \
+    vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml \
     $(COMMON_PATH)/configs/vintf/c2_manifest_vendor.xml
 
 # Health
@@ -146,9 +143,7 @@ KERNEL_CUSTOM_LLVM := true
 
 
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_ADDITIONAL_FLAGS += NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
-TARGET_KERNEL_SOURCE := kernel/realme/sm8250
-TARGET_KERNEL_CONFIG := vendor/sm8250_defconfig
+KERNEL_DEFCONFIG := vendor/sm8250_defconfig
 
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -224,11 +219,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# Security patch level
-VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
-
 # SELinux
-include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
 
 # Verified boot
