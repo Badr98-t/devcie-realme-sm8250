@@ -32,6 +32,8 @@ bluetooth.profile.sap.server.enabled=true
 debug.sf.enable_hwc_vds=0
 debug.sf.latch_unsignaled=0
 persist.sys.brightness.low.gamma=true
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=20
 
 # CNE
 persist.vendor.cne.feature=1
