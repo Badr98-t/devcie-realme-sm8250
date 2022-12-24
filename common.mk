@@ -379,6 +379,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
+    AOSPAOPlusFrameworksResCommon \
     FrameworksResTarget \
     OPlusCarrierConfigResCommon \
     DeviceExtrasResCommon \
