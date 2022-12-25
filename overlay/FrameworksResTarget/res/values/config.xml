@@ -33,65 +33,6 @@
          2: gestures only for back, home and overview -->
     <integer name="config_navBarInteractionMode">2</integer>
 
-    <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>"/system/framework/framework.jar"</item>
-        <item>"/system/framework/services.jar"</item>
-        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
-        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
-        <item>"/system_ext/priv-app/SystemUI/SystemUIGoogle.apk"</item>
-        <item>"/system/bin/surfaceflinger"</item>
-        <item>"/system/lib64/libRSCacheDir.so"</item>
-        <item>"/system/lib64/libRS.so"</item>
-        <item>"/system/lib64/libRS_internal.so"</item>
-        <item>"/system/lib64/libbcinfo.so"</item>
-        <item>"/system/lib64/libRSDriver.so"</item>
-        <item>"/system/lib64/libRSSupport.so"</item>
-        <item>"/system/lib64/libRSCpuRef.so"</item>
-        <item>"/system/lib64/libblas.so"</item>
-        <item>"/system/framework/ext.jar"</item>
-        <item>"/system/lib/libEGL.so"</item>
-        <item>"/system/lib/libGLESv1_CM.so"</item>
-        <item>"/system/lib/libGLESv2.so"</item>
-        <item>"/system/lib/libGLESv3.so"</item>
-        <item>"/system/lib/libgui.so"</item>
-        <item>"/system/lib/libhwui.so"</item>
-        <item>"/system/lib/libui.so"</item>
-        <item>"/system/lib/libvulkan.so"</item>
-        <item>"/system/lib64/libEGL.so"</item>
-        <item>"/system/lib64/libGLESv1_CM.so"</item>
-        <item>"/system/lib64/libGLESv2.so"</item>
-        <item>"/system/lib64/libGLESv3.so"</item>
-        <item>"/system/lib64/libgui.so"</item>
-        <item>"/system/lib64/libhwui.so"</item>
-        <item>"/system/lib64/libui.so"</item>
-        <item>"/system/lib64/libvulkan.so"</item>
-        <item>"/vendor/lib/egl/eglSubDriverAndroid.so"</item>
-        <item>"/vendor/lib/egl/libEGL_adreno.so"</item>
-        <item>"/vendor/lib/egl/libGLESv1_CM_adreno.so"</item>
-        <item>"/vendor/lib/egl/libGLESv2_adreno.so"</item>
-        <item>"/vendor/lib/hw/vulkan.adreno.so"</item>
-        <item>"/vendor/lib/libCB.so"</item>
-        <item>"/vendor/lib/libOpenCL.so"</item>
-        <item>"/vendor/lib/libadreno_utils.so"</item>
-        <item>"/vendor/lib/libgpudataproducer.so"</item>
-        <item>"/vendor/lib/libgsl.so"</item>
-        <item>"/vendor/lib/libllvm-glnext.so"</item>
-        <item>"/vendor/lib/libllvm-qcom.so"</item>
-        <item>"/vendor/lib64/egl/eglSubDriverAndroid.so"</item>
-        <item>"/vendor/lib64/egl/libEGL_adreno.so"</item>
-        <item>"/vendor/lib64/egl/libGLESv1_CM_adreno.so"</item>
-        <item>"/vendor/lib64/egl/libGLESv2_adreno.so"</item>
-        <item>"/vendor/lib64/hw/vulkan.adreno.so"</item>
-        <item>"/vendor/lib64/libCB.so"</item>
-        <item>"/vendor/lib64/libOpenCL.so"</item>
-        <item>"/vendor/lib64/libadreno_utils.so"</item>
-        <item>"/vendor/lib64/libgpudataproducer.so"</item>
-        <item>"/vendor/lib64/libgsl.so"</item>
-        <item>"/vendor/lib64/libllvm-glnext.so"</item>
-        <item>"/vendor/lib64/libllvm-qcom.so"</item>
-    </string-array>
-
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
          on the headphone/microphone jack. When false use the older uevent framework. -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
@@ -112,8 +53,6 @@
         <item>com.google.android.apps.cameralite</item>
         <item>org.codeaurora.snapcam</item>
         <item>com.android.camera</item>
-        <item>org.lineageos.aperture</item>
-        <item>org.lineageos.aperture.dev</item>
         <item>com.oneplus.camera</item>
         <item>com.oplus.camera</item>
         <item>com.oppo.camera</item>
