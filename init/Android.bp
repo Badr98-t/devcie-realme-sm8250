@@ -17,6 +17,21 @@ prebuilt_etc {
     device_specific: true,
 }
 
+
+prebuilt_etc {
+    name: "init.aospa.rc",
+    src: "init.aospa.rc",
+    sub_dir: "init",
+    device_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.device_extras.rc",
+    src: "init.device_extras.rc",
+    sub_dir: "init",
+    device_specific: true,
+}
+
 prebuilt_etc {
     name: "init.target.rc",
     src: "init.target.rc",
