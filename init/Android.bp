@@ -25,8 +25,22 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.los.rc",
+    src: "init.los.rc",
+    sub_dir: "init",
+    device_specific: true,
+}
+
+prebuilt_etc {
     name: "init.oplus.rc",
     src: "init.oplus.rc",
+    sub_dir: "init",
+    device_specific: true,
+}
+
+prebuilt_etc {
+    name: "init.device_extras.rc",
+    src: "init.device_extras.rc",
     sub_dir: "init",
     device_specific: true,
 }

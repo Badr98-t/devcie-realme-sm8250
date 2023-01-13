@@ -198,10 +198,6 @@ PRODUCT_COPY_FILES += \
 # Use mimalloc allocator instead of jemalloc
 PRODUCT_USE_MIMALLOC := true
 
-# Doze
-PRODUCT_PACKAGES += \
-    OplusDoze
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
@@ -276,6 +272,8 @@ PRODUCT_PACKAGES += \
     init.oplus.rc \
     init.oplus.sh \
     init.oplus.touch.rc \
+    init.los.rc \
+    init.device_extras.rc \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.power.rc \
@@ -373,18 +371,24 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-derp
+    $(LOCAL_PATH)/overlay-aosp
 
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResTarget \
     OPlusCarrierConfigResCommon \
+    DeviceExtrasResCommon \
+    DeviceExtrasResTarget \
     OPlusFrameworksResCommon \
     OPlusNfcResCommon \
     OPlusSettingsResCommon \
     OPlusSystemUIResCommon \
     OPlusTetheringResCommon \
     WifiResTarget
+
+# DeviceExtras
+PRODUCT_PACKAGES += \
+    DeviceExtras 
 
 # Partition
 PRODUCT_BUILD_SUPER_PARTITION := false
