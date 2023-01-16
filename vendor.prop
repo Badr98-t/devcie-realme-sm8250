@@ -74,6 +74,9 @@ persist.vendor.sensors.debug.hal=0
 persist.vendor.sensors.sync_request=true
 vendor.sensor.hal.pickup=android.sensor.tilt_detector
 
+# SSR
+persist.vendor.ssr.restart_level=ALL_ENABLE
+
 # Wifi
 wifi.aware.interface=wifi-aware0
 
