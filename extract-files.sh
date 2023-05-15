@@ -66,6 +66,9 @@ function blob_fixup() {
         odm/etc/dolby/multimedia_dolby_dax_default.xml)
             sed -i "/volume-leveler-enable/ s/true/false/g" "${2}"
             ;;
+        dm/etc/init/vendor.oplus.hardware.oplusSensor@1.0-service.rc)
+            sed -i "/user/ s/system/root/g" "${2}"
+            ;;
         odm/lib/libdlbdsservice_v3_6.so|odm/lib/libstagefright_soft_ddpdec.so|odm/lib/libstagefrightdolby.so|odm/lib64/libdlbdsservice_v3_6.so)
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
