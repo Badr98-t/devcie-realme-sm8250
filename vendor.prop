@@ -143,6 +143,9 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
+# GFX
+ro.config.avoid_gfx_accel=true
+
 # Graphics
 ro.surface_flinger.wcg_composition_dataspace=143261696
 vendor.opengles.version=196610
