@@ -50,6 +50,9 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
+# GFX
+ro.config.avoid_gfx_accel=true
+
 # Graphics
 debug.sf.disable_backpressure=1
 ro.surface_flinger.set_display_power_timer_ms=1000
