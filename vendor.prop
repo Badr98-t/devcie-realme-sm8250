@@ -70,6 +70,7 @@ persist.vendor.qcomsysd.enabled=1
 
 # Sensors
 persist.vendor.sensors.allow_non_default_discovery=true
+persist.vendor.sensors.debug.hal=0
 persist.vendor.sensors.sync_request=true
 vendor.sensor.hal.pickup=android.sensor.tilt_detector
 
