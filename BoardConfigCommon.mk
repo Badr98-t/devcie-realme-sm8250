@@ -49,6 +49,9 @@ TARGET_BOOTLOADER_BOARD_NAME := kona
 # Display
 TARGET_SCREEN_DENSITY := 480
 
+# Disable Postrender Cleanup
+TARGET_DISABLE_POSTRENDER_CLEANUP := true
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
