@@ -68,11 +68,25 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio libraries
 odm/lib/libaudioEngineerTest.so
+odm/lib/liblvimfs.so
+odm/lib/liblvimfs_wrapper.so
 vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libaudiopreprocessing.so
+vendor/lib/soundfx/libbundlewrapper.so
+vendor/lib/soundfx/libdownmix.so
+vendor/lib/soundfx/libdynproc.so
+vendor/lib/soundfx/libeffectproxy.so
+vendor/lib/soundfx/libldnhncr.so
 vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcompostprocbundle.so
+vendor/lib/soundfx/libqcomvisualizer.so
+vendor/lib/soundfx/libqcomvoiceprocessing.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
+vendor/lib/soundfx/libreverbwrapper.so
 vendor/lib/soundfx/libshoebox.so
+vendor/lib/soundfx/libvisualizer.so
+vendor/lib/soundfx/libvolumelistener.so
 vendor/lib/liba2dpoffload.so
 vendor/lib/libssrec.so
 vendor/lib/libacdb-fts.so
@@ -1017,6 +1031,43 @@ vendor/lib64/vendor.display.color@1.3.so
 vendor/lib64/vendor.display.color@1.4.so
 vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
+
+# Dolby
+odm/bin/hw/vendor.dolby_v3_6.hardware.dms360@2.0-service
+odm/etc/dolby/multimedia_dolby_dax_default.xml
+odm/etc/init/vendor.dolby_v3_6.hardware.dms360@2.0-service.rc
+odm/etc/vintf/manifest/manifest_dax_dolby_v3_6.xml
+odm/etc/audio_effects.xml
+odm/lib/libstagefright_soft_ddpdec_v3_6.so:odm/lib/libstagefright_soft_ddpdec.so
+odm/lib/libstagefright_soft_ac4dec_v3_6.so:odm/lib/libstagefright_soft_ac4dec.so
+odm/lib/soundfx/libhwdap_v3_6.so
+odm/lib/soundfx/libswdap_v3_6.so
+odm/lib/soundfx/libswgamedap_v3_6.so
+odm/lib/libavcodec.so
+odm/lib/libdapparamstorage_v3_6.so
+odm/lib/libdeccfg_v3_6.so
+odm/lib/libdlbdsservice_v3_6.so
+odm/lib/libqtigef.so
+odm/lib/libstagefrightdolby.so
+odm/lib/libswresample.so
+odm/lib/vendor.dolby_v3_6.hardware.dms360@2.0-impl.so
+odm/lib/vendor.dolby_v3_6.hardware.dms360@2.0.so
+odm/lib64/soundfx/libhwdap_v3_6.so
+odm/lib64/soundfx/libswdap_v3_6.so
+odm/lib64/soundfx/libswgamedap_v3_6.so
+odm/lib64/libavcodec.so
+odm/lib64/libdapparamstorage_v3_6.so
+odm/lib64/libdeccfg_v3_6.so
+odm/lib64/libdlbdsservice_v3_6.so
+odm/lib64/libqtigef.so
+odm/lib64/libswresample.so
+odm/lib64/vendor.dolby_v3_6.hardware.dms360@2.0-impl.so
+odm/lib64/vendor.dolby_v3_6.hardware.dms360@2.0.so
+vendor/lib/libadsprpc.so
+vendor/lib/libstagefright_soft_qtiflacdec.so
+vendor/lib64/libstagefright_soft_qtiflacdec.so
+vendor/etc/audio_effects.xml
+vendor/etc/audio_effects.conf
 
 # DPM
 vendor/bin/dpmQmiMgr
