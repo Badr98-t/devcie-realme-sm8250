@@ -19,6 +19,5 @@
     <string-array name="config_skuSupportsSecureNfc">
         <item>bitra</item>
         <item>bladerunner</item>
-        <item>bladerunner_48m</item>
     </string-array>
 </resources>
