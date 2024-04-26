@@ -51,16 +51,24 @@ on property:sys.boot_completed=1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
 
+    # Uclamp tunings
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/top-app/cpu.uclamp.min 10
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/foreground/cpu.uclamp.max 80
+    write /dev/cpuctl/background/cpu.uclamp.max 20
+    write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
+
     # Setup runtime schedTune
-    write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/foreground/schedtune.prefer_high_cap 0
-    write /dev/stune/foreground/schedtune.boost 0
-    write /dev/stune/schedtune.prefer_idle 0
-    write /dev/stune/schedtune.prefer_high_cap 0
-    write /dev/stune/schedtune.boost 0
-    write /dev/stune/top-app/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.prefer_high_cap 0
-    write /dev/stune/top-app/schedtune.boost 10
+    #write /dev/stune/foreground/schedtune.prefer_idle 1
+    #write /dev/stune/foreground/schedtune.prefer_high_cap 0
+    #write /dev/stune/foreground/schedtune.boost 0
+    #write /dev/stune/schedtune.prefer_idle 0
+    #write /dev/stune/schedtune.prefer_high_cap 0
+    #write /dev/stune/schedtune.boost 0
+    #write /dev/stune/top-app/schedtune.prefer_idle 1
+    #write /dev/stune/top-app/schedtune.prefer_high_cap 0
+    #write /dev/stune/top-app/schedtune.boost 10
 
     # Setup runtime blkio
     # value for group_idle is us
@@ -115,19 +123,19 @@ on init
     # Boot time cpuset and stune
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-6
-    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/background/cpus 0-3
     write /dev/cpuset/system-background/cpus 0-2
-    write /dev/cpuset/audio-app/cpus 1-2
+    write /dev/cpuset/audio-app/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
-    write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/foreground/schedtune.prefer_high_cap 1
-    write /dev/stune/foreground/schedtune.boost 100
-    write /dev/stune/schedtune.prefer_idle 1
-    write /dev/stune/schedtune.prefer_high_cap 1
-    write /dev/stune/schedtune.boost 100
-    write /dev/stune/top-app/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.prefer_high_cap 1
-    write /dev/stune/top-app/schedtune.boost 100
+    #write /dev/stune/foreground/schedtune.prefer_idle 1
+    #write /dev/stune/foreground/schedtune.prefer_high_cap 1
+    #write /dev/stune/foreground/schedtune.boost 100
+    #write /dev/stune/schedtune.prefer_idle 1
+    #write /dev/stune/schedtune.prefer_high_cap 1
+    #write /dev/stune/schedtune.boost 100
+    #write /dev/stune/top-app/schedtune.prefer_idle 1
+    #write /dev/stune/top-app/schedtune.prefer_high_cap 1
+    #write /dev/stune/top-app/schedtune.boost 100
 
     # Boot time fs tuning
     write /sys/block/sda/queue/iostats 0
