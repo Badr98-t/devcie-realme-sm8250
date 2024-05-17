@@ -34,4 +34,6 @@
     <!-- Whether device has dash charging support -->
     <bool name="config_hasSuperDartCharger">true</bool>
 
+    <bool name="config_proximityCheckOnFpsUnlock">true</bool>
+
 </resources>
