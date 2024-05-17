@@ -24,6 +24,11 @@
     <string name="otg_mode_title">Enable USB-OTG</string>
     <string name="tile_otg_mode">USB-OTG</string>
 
+     <!-- DC Dimming mode -->
+     <string name="dc_dimming_mode_summary">Enable DC-Dimming to reduce the voltage applied to the display. *Note: Can cause flickering when using FP</string>
+     <string name="dc_dimming_mode_title">Enable DC-Dimming</string>
+     <string name="tile_dc_dimming_mode">DC-Dimming</string>
+
     <!-- Game mode -->
     <string name="game_mode_summary">Optimize touch screen for gaming and increase device performance</string>
     <string name="game_mode_title">Game Mode</string>

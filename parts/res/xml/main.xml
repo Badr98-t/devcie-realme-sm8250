@@ -21,13 +21,13 @@
         android:key="graphics"
         android:title="@string/display_title">
 
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:icon="@drawable/game_mode_icon"
             android:key="game"
             android:summary="@string/game_mode_summary"
             android:title="@string/game_mode_title" />
 
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:key="dnd"
             android:icon="@drawable/ic_info_outline_24dp"
             android:title="@string/dnd_title"
@@ -38,14 +38,20 @@
     <PreferenceCategory
         android:key="misc"
         android:title="@string/misc_title">
-        
-        <SwitchPreference
+
+        <SwitchPreferenceCompat
             android:icon="@drawable/usb_otg_icon"
             android:key="otg"
             android:summary="@string/otg_mode_summary"
             android:title="@string/otg_mode_title" />
 
-        <SwitchPreference
+        <SwitchPreferenceCompat
+            android:icon="@drawable/dc_dimming_icon"
+            android:key="dc_dimming"
+            android:summary="@string/dc_dimming_mode_summary"
+            android:title="@string/dc_dimming_mode_title" />
+
+        <SwitchPreferenceCompat
             android:icon="@drawable/fps_info_icon"
             android:key="fps_info"
             android:title="@string/fps_info_title"

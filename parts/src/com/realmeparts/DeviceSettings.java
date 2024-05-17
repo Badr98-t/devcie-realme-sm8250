@@ -30,7 +30,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import androidx.preference.TwoStatePreference;
 
 import java.io.IOException;
@@ -40,6 +40,7 @@ public class DeviceSettings extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     public static final String KEY_OTG_SWITCH = "otg";
+    public static final String KEY_DC_DIMMING = "dc_dimming";
     public static final String KEY_GAME_SWITCH = "game";
     public static final String KEY_DND_SWITCH = "dnd";
     public static final String KEY_FPS_INFO = "fps_info";
@@ -49,8 +50,9 @@ public class DeviceSettings extends PreferenceFragment
     public TwoStatePreference mDNDSwitch;
     public PreferenceCategory mPreferenceCategory;
     private TwoStatePreference mOTGModeSwitch;
+    private TwoStatePreference mDcDimmingSwitch;
     private TwoStatePreference mGameModeSwitch;
-    private SwitchPreference mFpsInfo;
+    private SwitchPreferenceCompat mFpsInfo;
     private SecureSettingListPreference mVibStrength;
 
     @Override
@@ -76,6 +78,11 @@ public class DeviceSettings extends PreferenceFragment
         mFpsInfo = findPreference(KEY_FPS_INFO);
         mFpsInfo.setChecked(Utils.isFpsInfoShowing(getActivity().getApplicationContext()));
         mFpsInfo.setOnPreferenceChangeListener(this);
+
+        mDcDimmingSwitch = (TwoStatePreference) findPreference(KEY_DC_DIMMING);
+        mDcDimmingSwitch.setEnabled(DcDimmingSwitch.isSupported());
+        mDcDimmingSwitch.setChecked(DcDimmingSwitch.isCurrentlyEnabled(this.getContext()));
+        mDcDimmingSwitch.setOnPreferenceChangeListener(new DcDimmingSwitch());
 
     }
 
