@@ -112,8 +112,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom.ramdisk \
     init.oplus.rc \
     init.oplus.sh \
-    init.aospa.rc \
-    init.device_extras.rc \
     init.target.rc \
     ueventd.oplus.rc
 
@@ -158,17 +156,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AOSPAOPlusFrameworksResCommon \
     OPlusCarrierConfigResCommon \
-    DeviceExtrasResCommon \
-    DeviceExtrasResTarget \
     OPlusFrameworksResCommon \
     OPlusNfcResCommon \
     OPlusSettingsResCommon \
     OPlusSystemUIResCommon \
     OPlusTetheringResCommon
-
-# DeviceExtras
-PRODUCT_PACKAGES += \
-    DeviceExtras 
 
 # Partition
 PRODUCT_BUILD_SUPER_PARTITION := false
