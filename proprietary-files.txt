@@ -1692,7 +1692,6 @@ vendor/lib64/libtrustedapploader.so
 odm/etc/wifi/bin_version
 odm/etc/wifi/regdb.bin
 odm/etc/wifi/regdb_version
-vendor/bin/cnss-daemon
 
 # WiFi Display (vendor)
 vendor/bin/wfdhdcphalservice
