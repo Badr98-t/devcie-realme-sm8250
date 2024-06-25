@@ -56,8 +56,6 @@ public class Startup extends BroadcastReceiver {
         restore(OTGModeSwitch.getFile(), enabled);
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_GAME_SWITCH, false);
         restore(GameModeSwitch.getFile(), enabled);
-        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_DC_DIMMING, false);
-        restore(DcDimmingSwitch.getFile(), enabled);
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_FPS_INFO, false);
         if (enabled) {
             Utils.startService(context, FPSInfoService.class);
