@@ -123,6 +123,9 @@ on property:sys.boot_completed=1
     # Migrate tasks again in case kernel threads are created during boot
     copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
 
+    #Create directory for SDX55M modem
+    mkdir /data/vendor/tombstones/SDX55M 0771 system system
+
 on property:vendor.post_boot.parsed=1
     # Configure UClamp
     write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
