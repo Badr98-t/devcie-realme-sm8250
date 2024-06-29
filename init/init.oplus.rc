@@ -108,6 +108,10 @@ on boot
     # TOF
     chown cameraserver cameraserver /dev/stmvl53l1_ranging
 
+
+    # Restrict permissions to socket file to hide Magisk better
+     chmod 440 /proc/net/unix 
+
     # Sensors
     chown system system /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
 
